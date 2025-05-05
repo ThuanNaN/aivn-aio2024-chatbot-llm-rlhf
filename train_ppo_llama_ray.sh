@@ -17,12 +17,12 @@ ray job submit --address="http://127.0.0.1:8265" \
    --colocate_actor_ref \
    --pretrain thuanan/Llama-3.2-1B-Instruct-Chat-sft \
    --reward_pretrain thuanan/Llama-3.2-1B-RM-DPO \
-   --save_path /openrlhf/examples/checkpoint/Llama-3.2-1B-RLHF-10k \
+   --save_path /openrlhf/examples/checkpoint/Llama-3.2-1B-RLHF-2k \
    --micro_train_batch_size 4 \
    --train_batch_size 64 \
    --micro_rollout_batch_size 8 \
-   --rollout_batch_size 1024 \
-   --max_epochs 1 \
+   --rollout_batch_size 512 \
+   --max_epochs 2 \
    --prompt_max_len 1024 \
    --generate_max_len 1024 \
    --zero_stage 3 \

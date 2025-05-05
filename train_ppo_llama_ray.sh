@@ -17,12 +17,11 @@ ray job submit --address="http://127.0.0.1:8265" \
    --colocate_actor_ref \
    --pretrain thuanan/Llama-3.2-1B-Instruct-Chat-sft \
    --reward_pretrain thuanan/Llama-3.2-1B-RM-DPO \
-   --save_path /openrlhf/examples/checkpoint/Llama-3.2-1B-RLHF \
-   --micro_train_batch_size 2 \
-   --train_batch_size 32 \
-   --micro_rollout_batch_size 4 \
+   --save_path /openrlhf/examples/checkpoint/Llama-3.2-1B-RLHF-10k \
+   --micro_train_batch_size 4 \
+   --train_batch_size 64 \
+   --micro_rollout_batch_size 8 \
    --rollout_batch_size 1024 \
-   --max_samples 10000 \
    --max_epochs 1 \
    --prompt_max_len 1024 \
    --generate_max_len 1024 \
@@ -31,7 +30,7 @@ ray job submit --address="http://127.0.0.1:8265" \
    --actor_learning_rate 5e-7 \
    --critic_learning_rate 9e-6 \
    --init_kl_coef 0.01 \
-   --prompt_data OpenRLHF/prompt-collection-v0.1 \
+   --prompt_data thuanan/Prompt-Vi-Alpaca-Preference-2k \
    --input_key context_messages \
    --apply_chat_template \
    --normalize_reward \

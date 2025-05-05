@@ -5,3 +5,4 @@ bitsandbytes==0.45.5
 unsloth==2025.4.7
 gradio
 openai
+vllm

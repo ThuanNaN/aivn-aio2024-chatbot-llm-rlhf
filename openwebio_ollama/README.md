@@ -31,7 +31,7 @@ To run a specific fine-tuned model:
 
 ```bash
 ollama run hf.co/thuanan/Llama-3.2-1B-Instruct-Chat-sft-gguf
-ollama run hf.co/thuanan/Llama-3.2-1B-RLHF-2k-vi-alpaca
+ollama run hf.co/thuanan/Llama-3.2-1B-RLHF-2k-vi-alpaca-gguf
 ```
 
 ### Other Useful Commands
